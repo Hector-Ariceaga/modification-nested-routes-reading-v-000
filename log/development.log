@@ -4155,3 +4155,16 @@ Processing by PostsController#edit as HTML
   Rendered posts/_form.html.erb (2.1ms)
   Rendered posts/edit.html.erb within layouts/application (7.9ms)
 Completed 200 OK in 42ms (Views: 25.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/new" for 24.20.229.173 at 2018-09-23 22:25:38 +0000
+Cannot render console from 24.20.229.173! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=new):
+  app/controllers/authors_controller.rb:4:in `show'
+
+
